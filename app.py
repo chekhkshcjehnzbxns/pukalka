@@ -3,7 +3,7 @@ from aiogram.types import InputFile
 import asyncio
 import random
 
-ADMINS_IDS = [661123100, 1282132056]
+ADMINS_IDS = [661123100]
 
 def set_client(me):
 	me.client = SESSIONS[str(me.phone)]
